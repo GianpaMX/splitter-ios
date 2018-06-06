@@ -3,6 +3,6 @@ language: swift
 
 script:
   - bundle exec fastlane tests
-#after_success:
+after_success:
 #  - bundle exec fastlane coverage
-#  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
