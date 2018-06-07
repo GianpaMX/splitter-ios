@@ -33,10 +33,9 @@ platform :ios do
 
 	lane :coverage do
 		slather(
-			travis: true,
-			cobertura_xml: true,
 			output_directory: "fastlane/slather",
 			html: true,
+			show: true,
 			scheme: "splitter",
 			proj: "./splitter.xcodeproj"
 		)
