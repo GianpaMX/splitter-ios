@@ -8,6 +8,11 @@ class GroupExpensesViewController: UITableViewController {
 
     var expenses = [ExpenseItem]()
 
+    static func storyboardInstance() -> GroupExpensesViewController? {
+        let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
+        return storyboard.instantiateInitialViewController() as? GroupExpensesViewController
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

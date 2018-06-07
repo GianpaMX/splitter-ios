@@ -11,6 +11,9 @@
 		7151C16620BF865D00BE1489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7151C16520BF865D00BE1489 /* Assets.xcassets */; };
 		7151C16920BF865D00BE1489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7151C16720BF865D00BE1489 /* LaunchScreen.storyboard */; };
 		7151C17420BF865D00BE1489 /* splitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151C17320BF865D00BE1489 /* splitterTests.swift */; };
+		716B6F7F20C8D8BD007A5CB0 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F7E20C8D8BD007A5CB0 /* ExpenseViewController.swift */; };
+		716B6F8220C8D90B007A5CB0 /* ExpenseViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F8120C8D90B007A5CB0 /* ExpenseViewControllerTest.swift */; };
+		716B6F8420C8ED3B007A5CB0 /* ExpenseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716B6F8320C8ED3B007A5CB0 /* ExpenseViewController.storyboard */; };
 		71D4671D20C8934900933979 /* GroupExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4671C20C8934900933979 /* GroupExpensesViewController.swift */; };
 		71D4671F20C8946100933979 /* GroupExpensesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D4671E20C8946100933979 /* GroupExpensesViewController.storyboard */; };
 		71D4672120C89D0200933979 /* GroupExpensesViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4672020C89D0200933979 /* GroupExpensesViewControllerTest.swift */; };
@@ -46,6 +49,9 @@
 		7151C17520BF865D00BE1489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7151C17A20BF865D00BE1489 /* splitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = splitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7151C18020BF865D00BE1489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		716B6F7E20C8D8BD007A5CB0 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
+		716B6F8120C8D90B007A5CB0 /* ExpenseViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewControllerTest.swift; sourceTree = "<group>"; };
+		716B6F8320C8ED3B007A5CB0 /* ExpenseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpenseViewController.storyboard; sourceTree = "<group>"; };
 		71D4671C20C8934900933979 /* GroupExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExpensesViewController.swift; sourceTree = "<group>"; };
 		71D4671E20C8946100933979 /* GroupExpensesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupExpensesViewController.storyboard; sourceTree = "<group>"; };
 		71D4672020C89D0200933979 /* GroupExpensesViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExpensesViewControllerTest.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		7151C15D20BF865C00BE1489 /* splitter */ = {
 			isa = PBXGroup;
 			children = (
+				716B6F7D20C8D86A007A5CB0 /* expense */,
 				71D4671B20C8930300933979 /* groupexpenses */,
 				7151C15E20BF865C00BE1489 /* AppDelegate.swift */,
 				7151C16520BF865D00BE1489 /* Assets.xcassets */,
@@ -122,10 +129,28 @@
 		7151C17D20BF865D00BE1489 /* splitterUITests */ = {
 			isa = PBXGroup;
 			children = (
+				716B6F8020C8D8DE007A5CB0 /* expense */,
 				71D4672220C89D5B00933979 /* groupexpenses */,
 				7151C18020BF865D00BE1489 /* Info.plist */,
 			);
 			path = splitterUITests;
+			sourceTree = "<group>";
+		};
+		716B6F7D20C8D86A007A5CB0 /* expense */ = {
+			isa = PBXGroup;
+			children = (
+				716B6F7E20C8D8BD007A5CB0 /* ExpenseViewController.swift */,
+				716B6F8320C8ED3B007A5CB0 /* ExpenseViewController.storyboard */,
+			);
+			path = expense;
+			sourceTree = "<group>";
+		};
+		716B6F8020C8D8DE007A5CB0 /* expense */ = {
+			isa = PBXGroup;
+			children = (
+				716B6F8120C8D90B007A5CB0 /* ExpenseViewControllerTest.swift */,
+			);
+			path = expense;
 			sourceTree = "<group>";
 		};
 		71D4671B20C8930300933979 /* groupexpenses */ = {
@@ -259,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716B6F8420C8ED3B007A5CB0 /* ExpenseViewController.storyboard in Resources */,
 				7151C16920BF865D00BE1489 /* LaunchScreen.storyboard in Resources */,
 				7151C16620BF865D00BE1489 /* Assets.xcassets in Resources */,
 				71D4671F20C8946100933979 /* GroupExpensesViewController.storyboard in Resources */,
@@ -288,6 +314,7 @@
 			files = (
 				71D4672420C8A27900933979 /* ExpenseTableViewCell.swift in Sources */,
 				71D4671D20C8934900933979 /* GroupExpensesViewController.swift in Sources */,
+				716B6F7F20C8D8BD007A5CB0 /* ExpenseViewController.swift in Sources */,
 				7151C15F20BF865C00BE1489 /* AppDelegate.swift in Sources */,
 				71D4672720C8A45800933979 /* ExpenseItem.swift in Sources */,
 			);
@@ -306,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D4672120C89D0200933979 /* GroupExpensesViewControllerTest.swift in Sources */,
+				716B6F8220C8D90B007A5CB0 /* ExpenseViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

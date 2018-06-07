@@ -1,11 +1,11 @@
 import XCTest
 
-class GroupExpensesViewControllerTest: XCTestCase {
+class ExpenseViewControllerTest: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         let app = XCUIApplication()
-        app.launchArguments.append("GroupExpensesViewController")
+        app.launchArguments.append("ExpenseViewController")
         app.launch()
     }
 

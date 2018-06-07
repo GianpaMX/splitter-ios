@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cxM-7C-m53">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Expense View Controller-->
+        <scene sceneID="jDJ-7H-fY7">
+            <objects>
+                <viewController id="cxM-7C-m53" customClass="ExpenseViewController" customModule="splitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yr7-7R-2o4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptr-Et-MaA">
+                                <rect key="frame" x="2" y="22" width="371" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Title"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cpR-E4-UAM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qid-8g-Tz9">
+                                <rect key="frame" x="2" y="62" width="371" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FwP-6t-T2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ptr-Et-MaA" firstAttribute="top" secondItem="YvM-LB-JOF" secondAttribute="top" constant="2" id="2Rn-z3-9O5"/>
+                            <constraint firstItem="ptr-Et-MaA" firstAttribute="leading" secondItem="YvM-LB-JOF" secondAttribute="leading" constant="2" id="Erb-KJ-Mdy"/>
+                            <constraint firstItem="YvM-LB-JOF" firstAttribute="trailing" secondItem="Qid-8g-Tz9" secondAttribute="trailing" constant="2" id="ZaE-cE-NTe"/>
+                            <constraint firstItem="Qid-8g-Tz9" firstAttribute="top" secondItem="ptr-Et-MaA" secondAttribute="bottom" constant="10" id="c3o-R9-OEo"/>
+                            <constraint firstItem="YvM-LB-JOF" firstAttribute="trailing" secondItem="ptr-Et-MaA" secondAttribute="trailing" constant="2" id="d3U-kZ-zJz"/>
+                            <constraint firstItem="Qid-8g-Tz9" firstAttribute="leading" secondItem="YvM-LB-JOF" secondAttribute="leading" constant="2" id="kKO-26-Olm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YvM-LB-JOF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dV-x7-ifW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="131"/>
+        </scene>
+    </scenes>
+</document>
