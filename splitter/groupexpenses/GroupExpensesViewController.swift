@@ -16,7 +16,23 @@ class GroupExpensesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Expenses"
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addExpense))
+
         expenses.append(ExpenseItem(id: 1, title: "Hello", total: 123.45))
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+
+    @objc func addExpense() {
+        guard let expenseViewController = ExpenseViewController.storyboardInstance() else {
+            fatalError("Unable to instanciate ExpenseViewController")
+        }
+        navigationController?.pushViewController(expenseViewController, animated: true)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
