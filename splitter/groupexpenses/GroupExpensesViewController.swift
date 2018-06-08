@@ -2,9 +2,11 @@ import UIKit
 
 private let cellIdentifier = "ExpenseTableViewCell"
 
-class GroupExpensesViewController: UITableViewController {
+class GroupExpensesViewController: UITableViewController, GroupExpensesPresenterView {
     //MARK: Properties
     @IBOutlet weak var expensesTableView: UITableView!
+
+    var presenter: GroupExpensesPresenter? = nil
 
     var expenses = [ExpenseItem]()
 
@@ -15,6 +17,7 @@ class GroupExpensesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = GroupExpensesPresenter(view: self as GroupExpensesPresenterView)
 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Expenses"
@@ -26,13 +29,6 @@ class GroupExpensesViewController: UITableViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = true
-    }
-
-    @objc func addExpense() {
-        guard let expenseViewController = ExpenseViewController.storyboardInstance() else {
-            fatalError("Unable to instanciate ExpenseViewController")
-        }
-        navigationController?.pushViewController(expenseViewController, animated: true)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,5 +48,20 @@ class GroupExpensesViewController: UITableViewController {
         cell.titleLabel.text = expense.title
 
         return cell
+    }
+
+    @objc func addExpense() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.presenter?.addExpense()
+        }
+    }
+
+    func onExpenseAdded(expenseId: Int) {
+        DispatchQueue.main.async {
+            guard let expenseViewController = ExpenseViewController.storyboardInstance() else {
+                fatalError("Unable to instanciate ExpenseViewController")
+            }
+            self.navigationController?.pushViewController(expenseViewController, animated: true)
+        }
     }
 }

@@ -7,8 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-
-        guard let rootViewController = getRootViewController() else {
+        guard let rootViewController = GroupExpensesViewController.storyboardInstance() else {
             fatalError("Unable to instanciate RootViewController")
         }
         let navigationController = UINavigationController(rootViewController: rootViewController)
@@ -17,13 +16,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         return true
-    }
-
-    func getRootViewController() -> UIViewController? {
-        if(ProcessInfo.processInfo.arguments.contains(String(describing: ExpenseViewController.self))) {
-            return ExpenseViewController.storyboardInstance()
-        }
-
-        return GroupExpensesViewController.storyboardInstance()
     }
 }
