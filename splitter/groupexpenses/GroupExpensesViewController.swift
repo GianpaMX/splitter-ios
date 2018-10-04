@@ -5,8 +5,6 @@ private let cellIdentifier = "ExpenseTableViewCell"
 class GroupExpensesViewController: UITableViewController, GroupExpensesPresenterView {
     //MARK: Properties
     @IBOutlet weak var expensesTableView: UITableView!
-
-    var objectLocator : ObjectLocator? = nil
     
     var presenter: GroupExpensesPresenter? = nil
 
@@ -15,7 +13,8 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
     static func storyboardInstance(objectLocator : ObjectLocator) -> GroupExpensesViewController? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
         let viewController = storyboard.instantiateInitialViewController() as? GroupExpensesViewController
-        viewController?.objectLocator = objectLocator
+        
+        viewController?.presenter = objectLocator.getObject()
         
         return viewController
     }
@@ -23,7 +22,6 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = objectLocator?.getObject()
         presenter?.view = self
 
         navigationController?.navigationBar.prefersLargeTitles = true
