@@ -6,18 +6,25 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
     //MARK: Properties
     @IBOutlet weak var expensesTableView: UITableView!
 
+    var objectLocator : ObjectLocator? = nil
+    
     var presenter: GroupExpensesPresenter? = nil
 
     var expenses = [ExpenseItem]()
 
-    static func storyboardInstance() -> GroupExpensesViewController? {
+    static func storyboardInstance(objectLocator : ObjectLocator) -> GroupExpensesViewController? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
-        return storyboard.instantiateInitialViewController() as? GroupExpensesViewController
+        let viewController = storyboard.instantiateInitialViewController() as? GroupExpensesViewController
+        viewController?.objectLocator = objectLocator
+        
+        return viewController
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = GroupExpensesPresenter(view: self as GroupExpensesPresenterView)
+        
+        presenter = objectLocator?.getObject()
+        presenter?.view = self
 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Expenses"

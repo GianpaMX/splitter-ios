@@ -1,7 +1,11 @@
 class GroupExpensesPresenter {
-    let view: GroupExpensesPresenterView?
+    let saveExpenseUseCase: SaveExpenseUseCase
+    
+    var view: GroupExpensesPresenterView?
 
-    init(view: GroupExpensesPresenterView?) {
+    init(saveExpenseUseCase: SaveExpenseUseCase, view: GroupExpensesPresenterView? = nil) {
+        self.saveExpenseUseCase = saveExpenseUseCase
+        
         self.view = view
     }
 
