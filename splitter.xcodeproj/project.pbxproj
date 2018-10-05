@@ -263,13 +263,16 @@
 				TargetAttributes = {
 					7151C15A20BF865C00BE1489 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 					};
 					7151C16E20BF865D00BE1489 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 						TestTargetID = 7151C15A20BF865C00BE1489;
 					};
 					7151C17920BF865D00BE1489 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 						TestTargetID = 7151C15A20BF865C00BE1489;
 					};
 				};
@@ -511,7 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.gianpamx.splitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -529,7 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.gianpamx.splitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -548,7 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.gianpamx.splitterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/splitter.app/splitter";
 			};
@@ -568,7 +571,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.gianpamx.splitterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/splitter.app/splitter";
 			};
@@ -587,7 +590,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.gianpamx.splitterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = splitter;
 			};
@@ -606,7 +609,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.gianpamx.splitterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = splitter;
 			};
