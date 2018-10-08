@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7116FA6C216A7CB6009EE334 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA6A216A7CB6009EE334 /* DataModel.xcdatamodeld */; };
+		7116FA6E216AEF0A009EE334 /* PersistenceGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA6D216AEF0A009EE334 /* PersistenceGateway.swift */; };
+		7116FA70216AEF69009EE334 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA6F216AEF69009EE334 /* CoreDataPersistence.swift */; };
+		7116FA72216AFD23009EE334 /* GetExpensesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA71216AFD23009EE334 /* GetExpensesUseCase.swift */; };
+		7116FA74216B086E009EE334 /* FakePersitence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA73216B086E009EE334 /* FakePersitence.swift */; };
 		714D3B1021657C14003EB3F5 /* ObjectLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D3B0F21657C14003EB3F5 /* ObjectLocator.swift */; };
-		714D3B1221657C40003EB3F5 /* ProductionObjectLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D3B1121657C40003EB3F5 /* ProductionObjectLocator.swift */; };
 		714D3B1421658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D3B1321658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift */; };
 		7151C15F20BF865C00BE1489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151C15E20BF865C00BE1489 /* AppDelegate.swift */; };
 		7151C16620BF865D00BE1489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7151C16520BF865D00BE1489 /* Assets.xcassets */; };
 		7151C16920BF865D00BE1489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7151C16720BF865D00BE1489 /* LaunchScreen.storyboard */; };
-		7151C17420BF865D00BE1489 /* splitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151C17320BF865D00BE1489 /* splitterTests.swift */; };
 		716B6F7F20C8D8BD007A5CB0 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F7E20C8D8BD007A5CB0 /* ExpenseViewController.swift */; };
 		716B6F8420C8ED3B007A5CB0 /* ExpenseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716B6F8320C8ED3B007A5CB0 /* ExpenseViewController.storyboard */; };
 		716B6F8820C9EE1E007A5CB0 /* GroupExpensesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F8720C9EE1E007A5CB0 /* GroupExpensesPresenter.swift */; };
@@ -44,8 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7116FA6B216A7CB6009EE334 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		7116FA6D216AEF0A009EE334 /* PersistenceGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceGateway.swift; sourceTree = "<group>"; };
+		7116FA6F216AEF69009EE334 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
+		7116FA71216AFD23009EE334 /* GetExpensesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExpensesUseCase.swift; sourceTree = "<group>"; };
+		7116FA73216B086E009EE334 /* FakePersitence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePersitence.swift; sourceTree = "<group>"; };
 		714D3B0F21657C14003EB3F5 /* ObjectLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectLocator.swift; sourceTree = "<group>"; };
-		714D3B1121657C40003EB3F5 /* ProductionObjectLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionObjectLocator.swift; sourceTree = "<group>"; };
 		714D3B1321658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveExpenseUseCaseImplTests.swift; sourceTree = "<group>"; };
 		7151C15B20BF865C00BE1489 /* splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7151C15E20BF865C00BE1489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +60,6 @@
 		7151C16820BF865D00BE1489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7151C16A20BF865D00BE1489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7151C16F20BF865D00BE1489 /* splitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = splitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7151C17320BF865D00BE1489 /* splitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splitterTests.swift; sourceTree = "<group>"; };
 		7151C17520BF865D00BE1489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7151C17A20BF865D00BE1489 /* splitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = splitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7151C18020BF865D00BE1489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7116FA69216A7C64009EE334 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7116FA6A216A7CB6009EE334 /* DataModel.xcdatamodeld */,
+				7116FA6F216AEF69009EE334 /* CoreDataPersistence.swift */,
+				7116FA73216B086E009EE334 /* FakePersitence.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		7151C15220BF865C00BE1489 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +133,7 @@
 		7151C15D20BF865C00BE1489 /* splitter */ = {
 			isa = PBXGroup;
 			children = (
+				7116FA69216A7C64009EE334 /* data */,
 				716B6F8D20CB01EE007A5CB0 /* core */,
 				716B6F7D20C8D86A007A5CB0 /* expense */,
 				71D4671B20C8930300933979 /* groupexpenses */,
@@ -125,7 +142,6 @@
 				7151C16720BF865D00BE1489 /* LaunchScreen.storyboard */,
 				7151C16A20BF865D00BE1489 /* Info.plist */,
 				714D3B0F21657C14003EB3F5 /* ObjectLocator.swift */,
-				714D3B1121657C40003EB3F5 /* ProductionObjectLocator.swift */,
 			);
 			path = splitter;
 			sourceTree = "<group>";
@@ -133,7 +149,6 @@
 		7151C17220BF865D00BE1489 /* splitterTests */ = {
 			isa = PBXGroup;
 			children = (
-				7151C17320BF865D00BE1489 /* splitterTests.swift */,
 				7151C17520BF865D00BE1489 /* Info.plist */,
 				714D3B1321658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift */,
 			);
@@ -163,6 +178,8 @@
 			children = (
 				716B6F9220CB028D007A5CB0 /* model */,
 				716B6F8E20CB0202007A5CB0 /* SaveExpenseUseCase.swift */,
+				7116FA6D216AEF0A009EE334 /* PersistenceGateway.swift */,
+				7116FA71216AFD23009EE334 /* GetExpensesUseCase.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -330,14 +347,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7116FA6C216A7CB6009EE334 /* DataModel.xcdatamodeld in Sources */,
 				716B6F9120CB0244007A5CB0 /* Expense.swift in Sources */,
+				7116FA6E216AEF0A009EE334 /* PersistenceGateway.swift in Sources */,
+				7116FA70216AEF69009EE334 /* CoreDataPersistence.swift in Sources */,
 				716B6F8F20CB0202007A5CB0 /* SaveExpenseUseCase.swift in Sources */,
 				71D4672420C8A27900933979 /* ExpenseTableViewCell.swift in Sources */,
 				71D4671D20C8934900933979 /* GroupExpensesViewController.swift in Sources */,
 				716B6F7F20C8D8BD007A5CB0 /* ExpenseViewController.swift in Sources */,
 				7151C15F20BF865C00BE1489 /* AppDelegate.swift in Sources */,
-				714D3B1221657C40003EB3F5 /* ProductionObjectLocator.swift in Sources */,
+				7116FA74216B086E009EE334 /* FakePersitence.swift in Sources */,
 				714D3B1021657C14003EB3F5 /* ObjectLocator.swift in Sources */,
+				7116FA72216AFD23009EE334 /* GetExpensesUseCase.swift in Sources */,
 				71D4672720C8A45800933979 /* ExpenseItem.swift in Sources */,
 				716B6F8820C9EE1E007A5CB0 /* GroupExpensesPresenter.swift in Sources */,
 			);
@@ -347,7 +368,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7151C17420BF865D00BE1489 /* splitterTests.swift in Sources */,
 				714D3B1421658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,6 +675,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7116FA6A216A7CB6009EE334 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7116FA6B216A7CB6009EE334 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 7116FA6B216A7CB6009EE334 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7151C15320BF865C00BE1489 /* Project object */;
 }

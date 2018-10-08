@@ -1,27 +1,25 @@
 import UIKit
+import CoreData
 
 private let cellIdentifier = "ExpenseTableViewCell"
 
 class GroupExpensesViewController: UITableViewController, GroupExpensesPresenterView {
-    //MARK: Properties
-    @IBOutlet weak var expensesTableView: UITableView!
-    
     var presenter: GroupExpensesPresenter? = nil
 
     var expenses = [ExpenseItem]()
 
-    static func storyboardInstance(objectLocator : ObjectLocator) -> GroupExpensesViewController? {
+    static func storyboardInstance(objectLocator: ObjectLocator) -> GroupExpensesViewController? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
         let viewController = storyboard.instantiateInitialViewController() as? GroupExpensesViewController
-        
+
         viewController?.presenter = objectLocator.getObject()
-        
+
         return viewController
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         presenter?.view = self
 
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -29,7 +27,9 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addExpense))
 
-        expenses.append(ExpenseItem(id: 1, title: "Hello", total: 123.45))
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.presenter?.loadExpenses()
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,12 +61,19 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
         }
     }
 
-    func onExpenseAdded(expenseId: Int) {
+    func onExpenseAdded(expenseId: String) {
         DispatchQueue.main.async {
             guard let expenseViewController = ExpenseViewController.storyboardInstance() else {
                 fatalError("Unable to instanciate ExpenseViewController")
             }
             self.navigationController?.pushViewController(expenseViewController, animated: true)
+        }
+    }
+
+    func showExpenses(expenseItems: [ExpenseItem]) {
+        DispatchQueue.main.async {
+            self.expenses = expenseItems
+            self.tableView.reloadData()
         }
     }
 }

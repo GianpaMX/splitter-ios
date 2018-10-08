@@ -1,5 +1,5 @@
 struct ExpenseItem {
-    var id: Int = 0
+    var id: String = ""
     var title: String = ""
     var total: Double = 0.0
 }
