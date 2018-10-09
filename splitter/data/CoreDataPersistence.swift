@@ -22,9 +22,13 @@ class CoreDataPersistence: PersistenceGateway {
     }
 
     func findExpense(expenseId: String) -> Expense? {
+        return findManagedObjectById(id: expenseId)?.toExpense()
+    }
+
+    private func findManagedObjectById(id: String) -> NSManagedObject? {
         let extractedExpr: NSPersistentStoreCoordinator = container.persistentStoreCoordinator
-        if let managedObjectId = extractedExpr.managedObjectID(forURIRepresentation: URL(string: expenseId)!) {
-            return container.viewContext.object(with: managedObjectId).toExpense()
+        if let managedObjectId = extractedExpr.managedObjectID(forURIRepresentation: URL(string: id)!) {
+            return container.viewContext.object(with: managedObjectId)
         }
         return nil
     }
@@ -45,6 +49,17 @@ class CoreDataPersistence: PersistenceGateway {
         }
 
         return expenses
+    }
+
+    func updateExpense(expense: Expense) {
+        let managedObject = findManagedObjectById(id: expense.id)
+        managedObject?.setValue(expense.title, forKey: "title")
+
+        do {
+            try container.viewContext.save()
+        } catch {
+            print("Failed saving")
+        }
     }
 }
 

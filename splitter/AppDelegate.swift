@@ -36,7 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             saveExpenseUseCase: objectLocator.getObject()!,
             getExpensesUseCase: objectLocator.getObject()!)
         )
-        objectLocator.addObject(object: ExpensePresenter(getExpenseUseCase: objectLocator.getObject()!))
+        objectLocator.addObject(object: ExpensePresenter(
+            getExpenseUseCase: objectLocator.getObject()!,
+            saveExpenseUseCase: objectLocator.getObject()!)
+        )
 
         guard let rootViewController = GroupExpensesViewController.storyboardInstance(objectLocator: objectLocator) else {
             fatalError("Unable to instanciate GroupExpensesViewController")

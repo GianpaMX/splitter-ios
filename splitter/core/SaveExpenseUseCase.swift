@@ -14,6 +14,8 @@ class SaveExpenseUseCaseImpl: SaveExpenseUseCase {
 
         if(expense.id.isEmpty) {
             expense.id = persistenceGateway.createExpense(expense: expense)
+        } else {
+            persistenceGateway.updateExpense(expense: expense)
         }
 
         return expense

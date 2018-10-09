@@ -1,4 +1,8 @@
 class FakePersitence: PersistenceGateway {
+    func updateExpense(expense: Expense) {
+        // Do nothing
+    }
+
     func createExpense(expense: Expense) -> String {
         return ""
     }

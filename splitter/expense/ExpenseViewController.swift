@@ -3,7 +3,8 @@ import UIKit
 class ExpenseViewController: UIViewController, ExpensePresenterView {
     @IBOutlet weak var titleTextField: UITextField!
 
-    var expenseId: String = ""
+    var expenseId = ""
+    var expenseModel = ExpenseModel()
     var presenter: ExpensePresenter? = nil
 
     static func storyboardInstance(objectLocator: ObjectLocator, expenseId: String = "") -> ExpenseViewController? {
@@ -31,11 +32,19 @@ class ExpenseViewController: UIViewController, ExpensePresenterView {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(add))
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.expenseModel.title = self.titleTextField.text ?? ""
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.presenter?.saveExpense(expenseModel: self.expenseModel)
+        }
+    }
+
     @objc func add() {
     }
 
     func showExpense(expenseModel: ExpenseModel) {
         DispatchQueue.main.async {
+            self.expenseModel = expenseModel
             self.titleTextField.text = expenseModel.title
         }
     }
