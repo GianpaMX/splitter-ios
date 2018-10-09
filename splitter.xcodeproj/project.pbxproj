@@ -23,6 +23,9 @@
 		716B6F8C20CAE930007A5CB0 /* AddExpenseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F8B20CAE930007A5CB0 /* AddExpenseTest.swift */; };
 		716B6F8F20CB0202007A5CB0 /* SaveExpenseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F8E20CB0202007A5CB0 /* SaveExpenseUseCase.swift */; };
 		716B6F9120CB0244007A5CB0 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F9020CB0244007A5CB0 /* Expense.swift */; };
+		71A8BC37216C2C4300A0ECD5 /* ExpensePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A8BC36216C2C4300A0ECD5 /* ExpensePresenter.swift */; };
+		71A8BC39216C2FB400A0ECD5 /* GetExpenseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A8BC38216C2FB400A0ECD5 /* GetExpenseUseCase.swift */; };
+		71A8BC3C216C30D200A0ECD5 /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A8BC3B216C30D200A0ECD5 /* ExpenseModel.swift */; };
 		71D4671D20C8934900933979 /* GroupExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4671C20C8934900933979 /* GroupExpensesViewController.swift */; };
 		71D4671F20C8946100933979 /* GroupExpensesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D4671E20C8946100933979 /* GroupExpensesViewController.storyboard */; };
 		71D4672420C8A27900933979 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4672320C8A27900933979 /* ExpenseTableViewCell.swift */; };
@@ -69,6 +72,9 @@
 		716B6F8B20CAE930007A5CB0 /* AddExpenseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseTest.swift; sourceTree = "<group>"; };
 		716B6F8E20CB0202007A5CB0 /* SaveExpenseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveExpenseUseCase.swift; sourceTree = "<group>"; };
 		716B6F9020CB0244007A5CB0 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		71A8BC36216C2C4300A0ECD5 /* ExpensePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePresenter.swift; sourceTree = "<group>"; };
+		71A8BC38216C2FB400A0ECD5 /* GetExpenseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExpenseUseCase.swift; sourceTree = "<group>"; };
+		71A8BC3B216C30D200A0ECD5 /* ExpenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModel.swift; sourceTree = "<group>"; };
 		71D4671C20C8934900933979 /* GroupExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExpensesViewController.swift; sourceTree = "<group>"; };
 		71D4671E20C8946100933979 /* GroupExpensesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupExpensesViewController.storyboard; sourceTree = "<group>"; };
 		71D4672320C8A27900933979 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
@@ -167,8 +173,10 @@
 		716B6F7D20C8D86A007A5CB0 /* expense */ = {
 			isa = PBXGroup;
 			children = (
+				71A8BC3A216C30C400A0ECD5 /* model */,
 				716B6F7E20C8D8BD007A5CB0 /* ExpenseViewController.swift */,
 				716B6F8320C8ED3B007A5CB0 /* ExpenseViewController.storyboard */,
+				71A8BC36216C2C4300A0ECD5 /* ExpensePresenter.swift */,
 			);
 			path = expense;
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 				716B6F8E20CB0202007A5CB0 /* SaveExpenseUseCase.swift */,
 				7116FA6D216AEF0A009EE334 /* PersistenceGateway.swift */,
 				7116FA71216AFD23009EE334 /* GetExpensesUseCase.swift */,
+				71A8BC38216C2FB400A0ECD5 /* GetExpenseUseCase.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -188,6 +197,14 @@
 			isa = PBXGroup;
 			children = (
 				716B6F9020CB0244007A5CB0 /* Expense.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		71A8BC3A216C30C400A0ECD5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				71A8BC3B216C30D200A0ECD5 /* ExpenseModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -350,6 +367,7 @@
 				7116FA6C216A7CB6009EE334 /* DataModel.xcdatamodeld in Sources */,
 				716B6F9120CB0244007A5CB0 /* Expense.swift in Sources */,
 				7116FA6E216AEF0A009EE334 /* PersistenceGateway.swift in Sources */,
+				71A8BC39216C2FB400A0ECD5 /* GetExpenseUseCase.swift in Sources */,
 				7116FA70216AEF69009EE334 /* CoreDataPersistence.swift in Sources */,
 				716B6F8F20CB0202007A5CB0 /* SaveExpenseUseCase.swift in Sources */,
 				71D4672420C8A27900933979 /* ExpenseTableViewCell.swift in Sources */,
@@ -360,6 +378,8 @@
 				714D3B1021657C14003EB3F5 /* ObjectLocator.swift in Sources */,
 				7116FA72216AFD23009EE334 /* GetExpensesUseCase.swift in Sources */,
 				71D4672720C8A45800933979 /* ExpenseItem.swift in Sources */,
+				71A8BC37216C2C4300A0ECD5 /* ExpensePresenter.swift in Sources */,
+				71A8BC3C216C30D200A0ECD5 /* ExpenseModel.swift in Sources */,
 				716B6F8820C9EE1E007A5CB0 /* GroupExpensesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

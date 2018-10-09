@@ -4,6 +4,7 @@ import CoreData
 private let cellIdentifier = "ExpenseTableViewCell"
 
 class GroupExpensesViewController: UITableViewController, GroupExpensesPresenterView {
+    var objectLocator: ObjectLocator? = nil
     var presenter: GroupExpensesPresenter? = nil
 
     var expenses = [ExpenseItem]()
@@ -12,6 +13,7 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
         let viewController = storyboard.instantiateInitialViewController() as? GroupExpensesViewController
 
+        viewController?.objectLocator = objectLocator
         viewController?.presenter = objectLocator.getObject()
 
         return viewController
@@ -63,7 +65,10 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
 
     func onExpenseAdded(expenseId: String) {
         DispatchQueue.main.async {
-            guard let expenseViewController = ExpenseViewController.storyboardInstance() else {
+            guard let expenseViewController = ExpenseViewController.storyboardInstance(
+                objectLocator: self.objectLocator!,
+                expenseId: expenseId
+            ) else {
                 fatalError("Unable to instanciate ExpenseViewController")
             }
             self.navigationController?.pushViewController(expenseViewController, animated: true)
