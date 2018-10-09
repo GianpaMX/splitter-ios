@@ -57,6 +57,10 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        launchExpenseViewController(expenseId: self.expenses[indexPath.row].id)
+    }
+
     @objc func addExpense() {
         DispatchQueue.global(qos: .userInitiated).async {
             self.presenter?.addExpense()
@@ -65,13 +69,7 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
 
     func onExpenseAdded(expenseId: String) {
         DispatchQueue.main.async {
-            guard let expenseViewController = ExpenseViewController.storyboardInstance(
-                objectLocator: self.objectLocator!,
-                expenseId: expenseId
-            ) else {
-                fatalError("Unable to instanciate ExpenseViewController")
-            }
-            self.navigationController?.pushViewController(expenseViewController, animated: true)
+            self.launchExpenseViewController(expenseId: expenseId)
         }
     }
 
@@ -80,5 +78,15 @@ class GroupExpensesViewController: UITableViewController, GroupExpensesPresenter
             self.expenses = expenseItems
             self.tableView.reloadData()
         }
+    }
+
+    func launchExpenseViewController(expenseId: String) {
+        guard let expenseViewController = ExpenseViewController.storyboardInstance(
+            objectLocator: self.objectLocator!,
+            expenseId: expenseId
+        ) else {
+            fatalError("Unable to instanciate ExpenseViewController")
+        }
+        self.navigationController?.pushViewController(expenseViewController, animated: true)
     }
 }
