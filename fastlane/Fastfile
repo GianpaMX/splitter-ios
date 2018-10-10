@@ -26,7 +26,7 @@ platform :ios do
 		scan(
 			code_coverage: true,
 			clean: true,
-			project: "splitter.xcodeproj",
+			workspace: "splitter.xcworkspace",
 			scheme: "splitter"
 		)
 	end
@@ -37,7 +37,7 @@ platform :ios do
 			html: true,
 			show: true,
 			scheme: "splitter",
-			proj: "./splitter.xcodeproj"
+			workspace: "splitter.xcworkspace"
 		)
 	end
 end

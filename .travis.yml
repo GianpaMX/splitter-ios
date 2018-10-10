@@ -1,6 +1,9 @@
 osx_image: xcode10
 language: swift
-
+install:
+  - bundle install
+  - bundle exec pod repo update --silent
+  - bundle exec pod install
 script:
   - bundle exec fastlane tests
 after_success:
