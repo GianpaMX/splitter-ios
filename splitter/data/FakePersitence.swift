@@ -12,6 +12,6 @@ class FakePersitence: PersistenceGateway {
     }
 
     func findAll() -> [Expense] {
-        return [Expense]()
+        return [Expense(id: "ANY-ID", title: "Any title")]
     }
 }
