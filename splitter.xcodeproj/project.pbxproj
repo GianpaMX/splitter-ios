@@ -14,6 +14,7 @@
 		7116FA74216B086E009EE334 /* FakePersitence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA73216B086E009EE334 /* FakePersitence.swift */; };
 		7143BBE1216EB37F00EE328D /* generate_mocks.sh in Resources */ = {isa = PBXBuildFile; fileRef = 7143BBE0216EB37F00EE328D /* generate_mocks.sh */; };
 		7143BBE3216EB3E700EE328D /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7143BBE2216EB3E700EE328D /* GeneratedMocks.swift */; };
+		714737B4216F9DAF0010F716 /* GetExpensesUseCaseImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714737B3216F9DAF0010F716 /* GetExpensesUseCaseImplTests.swift */; };
 		714D3B1021657C14003EB3F5 /* ObjectLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D3B0F21657C14003EB3F5 /* ObjectLocator.swift */; };
 		714D3B1421658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D3B1321658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift */; };
 		7151C15F20BF865C00BE1489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151C15E20BF865C00BE1489 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		7116FA73216B086E009EE334 /* FakePersitence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePersitence.swift; sourceTree = "<group>"; };
 		7143BBE0216EB37F00EE328D /* generate_mocks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_mocks.sh; sourceTree = "<group>"; };
 		7143BBE2216EB3E700EE328D /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		714737B3216F9DAF0010F716 /* GetExpensesUseCaseImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExpensesUseCaseImplTests.swift; sourceTree = "<group>"; };
 		714D3B0F21657C14003EB3F5 /* ObjectLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectLocator.swift; sourceTree = "<group>"; };
 		714D3B1321658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveExpenseUseCaseImplTests.swift; sourceTree = "<group>"; };
 		7151C15B20BF865C00BE1489 /* splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 				7143BBE0216EB37F00EE328D /* generate_mocks.sh */,
 				7151C17520BF865D00BE1489 /* Info.plist */,
 				714D3B1321658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift */,
+				714737B3216F9DAF0010F716 /* GetExpensesUseCaseImplTests.swift */,
 			);
 			path = splitterTests;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714D3B1421658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift in Sources */,
+				714737B4216F9DAF0010F716 /* GetExpensesUseCaseImplTests.swift in Sources */,
 				7143BBE3216EB3E700EE328D /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
