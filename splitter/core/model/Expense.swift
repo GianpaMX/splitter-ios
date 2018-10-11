@@ -1,4 +1,4 @@
-struct Expense {
+struct Expense : Equatable {
     var id: String = ""
     var title: String = ""
 
