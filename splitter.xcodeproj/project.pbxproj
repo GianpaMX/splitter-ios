@@ -18,6 +18,7 @@
 		714737B8216FA1480010F716 /* GetExpenseUseCaseImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714737B7216FA1480010F716 /* GetExpenseUseCaseImplTests.swift */; };
 		714737BA216FA4BB0010F716 /* GroupExpensesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714737B9216FA4BB0010F716 /* GroupExpensesPresenterTests.swift */; };
 		714737BC216FF3620010F716 /* ExpensePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714737BB216FF3620010F716 /* ExpensePresenterTests.swift */; };
+		714737BE21717E0D0010F716 /* ExpenseViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714737BD21717E0D0010F716 /* ExpenseViewControllerTests.swift */; };
 		714D3B1021657C14003EB3F5 /* ObjectLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D3B0F21657C14003EB3F5 /* ObjectLocator.swift */; };
 		714D3B1421658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D3B1321658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift */; };
 		7151C15F20BF865C00BE1489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151C15E20BF865C00BE1489 /* AppDelegate.swift */; };
@@ -26,7 +27,7 @@
 		716B6F7F20C8D8BD007A5CB0 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F7E20C8D8BD007A5CB0 /* ExpenseViewController.swift */; };
 		716B6F8420C8ED3B007A5CB0 /* ExpenseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716B6F8320C8ED3B007A5CB0 /* ExpenseViewController.storyboard */; };
 		716B6F8820C9EE1E007A5CB0 /* GroupExpensesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F8720C9EE1E007A5CB0 /* GroupExpensesPresenter.swift */; };
-		716B6F8C20CAE930007A5CB0 /* AddExpenseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F8B20CAE930007A5CB0 /* AddExpenseTest.swift */; };
+		716B6F8C20CAE930007A5CB0 /* GroupExpensesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F8B20CAE930007A5CB0 /* GroupExpensesViewControllerTests.swift */; };
 		716B6F8F20CB0202007A5CB0 /* SaveExpenseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F8E20CB0202007A5CB0 /* SaveExpenseUseCase.swift */; };
 		716B6F9120CB0244007A5CB0 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B6F9020CB0244007A5CB0 /* Expense.swift */; };
 		71A8BC37216C2C4300A0ECD5 /* ExpensePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A8BC36216C2C4300A0ECD5 /* ExpensePresenter.swift */; };
@@ -74,6 +75,7 @@
 		714737B7216FA1480010F716 /* GetExpenseUseCaseImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExpenseUseCaseImplTests.swift; sourceTree = "<group>"; };
 		714737B9216FA4BB0010F716 /* GroupExpensesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExpensesPresenterTests.swift; sourceTree = "<group>"; };
 		714737BB216FF3620010F716 /* ExpensePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePresenterTests.swift; sourceTree = "<group>"; };
+		714737BD21717E0D0010F716 /* ExpenseViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewControllerTests.swift; sourceTree = "<group>"; };
 		714D3B0F21657C14003EB3F5 /* ObjectLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectLocator.swift; sourceTree = "<group>"; };
 		714D3B1321658E1D003EB3F5 /* SaveExpenseUseCaseImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveExpenseUseCaseImplTests.swift; sourceTree = "<group>"; };
 		7151C15B20BF865C00BE1489 /* splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +90,7 @@
 		716B6F7E20C8D8BD007A5CB0 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
 		716B6F8320C8ED3B007A5CB0 /* ExpenseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpenseViewController.storyboard; sourceTree = "<group>"; };
 		716B6F8720C9EE1E007A5CB0 /* GroupExpensesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExpensesPresenter.swift; sourceTree = "<group>"; };
-		716B6F8B20CAE930007A5CB0 /* AddExpenseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseTest.swift; sourceTree = "<group>"; };
+		716B6F8B20CAE930007A5CB0 /* GroupExpensesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExpensesViewControllerTests.swift; sourceTree = "<group>"; };
 		716B6F8E20CB0202007A5CB0 /* SaveExpenseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveExpenseUseCase.swift; sourceTree = "<group>"; };
 		716B6F9020CB0244007A5CB0 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		71A8BC36216C2C4300A0ECD5 /* ExpensePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePresenter.swift; sourceTree = "<group>"; };
@@ -200,7 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				7151C18020BF865D00BE1489 /* Info.plist */,
-				716B6F8B20CAE930007A5CB0 /* AddExpenseTest.swift */,
+				716B6F8B20CAE930007A5CB0 /* GroupExpensesViewControllerTests.swift */,
+				714737BD21717E0D0010F716 /* ExpenseViewControllerTests.swift */,
 			);
 			path = splitterUITests;
 			sourceTree = "<group>";
@@ -574,7 +577,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				716B6F8C20CAE930007A5CB0 /* AddExpenseTest.swift in Sources */,
+				714737BE21717E0D0010F716 /* ExpenseViewControllerTests.swift in Sources */,
+				716B6F8C20CAE930007A5CB0 /* GroupExpensesViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
