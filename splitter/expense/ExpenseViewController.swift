@@ -40,6 +40,11 @@ class ExpenseViewController: UIViewController, ExpensePresenterView {
     }
 
     @objc func add() {
+        guard let payerViewController = PayerViewController.storyboardInstance() else {
+            fatalError("Unable to instanciate PayerViewController")
+        }
+        payerViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.present(payerViewController, animated: true)
     }
 
     func showExpense(expenseModel: ExpenseModel) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711658BD217F84BA006C3B79 /* PayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711658BC217F84BA006C3B79 /* PayerViewController.swift */; };
+		711658BF217F850A006C3B79 /* PayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711658BE217F850A006C3B79 /* PayerViewController.storyboard */; };
 		7116FA6C216A7CB6009EE334 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA6A216A7CB6009EE334 /* DataModel.xcdatamodeld */; };
 		7116FA6E216AEF0A009EE334 /* PersistenceGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA6D216AEF0A009EE334 /* PersistenceGateway.swift */; };
 		7116FA70216AEF69009EE334 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FA6F216AEF69009EE334 /* CoreDataPersistence.swift */; };
@@ -64,6 +66,8 @@
 		3FE21038C9618A5C99572808 /* Pods-splitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splitter/Pods-splitter.debug.xcconfig"; sourceTree = "<group>"; };
 		5ADDEC7BFF9B252F732CF7D7 /* Pods_splitterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splitterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1E138DDD80B81DD9AFFC70 /* Pods_splitterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splitterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		711658BC217F84BA006C3B79 /* PayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerViewController.swift; sourceTree = "<group>"; };
+		711658BE217F850A006C3B79 /* PayerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayerViewController.storyboard; sourceTree = "<group>"; };
 		7116FA6B216A7CB6009EE334 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		7116FA6D216AEF0A009EE334 /* PersistenceGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceGateway.swift; sourceTree = "<group>"; };
 		7116FA6F216AEF69009EE334 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				716B6F7E20C8D8BD007A5CB0 /* ExpenseViewController.swift */,
 				716B6F8320C8ED3B007A5CB0 /* ExpenseViewController.storyboard */,
 				71A8BC36216C2C4300A0ECD5 /* ExpensePresenter.swift */,
+				711658BC217F84BA006C3B79 /* PayerViewController.swift */,
+				711658BE217F850A006C3B79 /* PayerViewController.storyboard */,
 			);
 			path = expense;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				716B6F8420C8ED3B007A5CB0 /* ExpenseViewController.storyboard in Resources */,
+				711658BF217F850A006C3B79 /* PayerViewController.storyboard in Resources */,
 				7151C16920BF865D00BE1489 /* LaunchScreen.storyboard in Resources */,
 				7151C16620BF865D00BE1489 /* Assets.xcassets in Resources */,
 				71D4671F20C8946100933979 /* GroupExpensesViewController.storyboard in Resources */,
@@ -555,6 +562,7 @@
 				7116FA72216AFD23009EE334 /* GetExpensesUseCase.swift in Sources */,
 				71D4672720C8A45800933979 /* ExpenseItem.swift in Sources */,
 				71A8BC37216C2C4300A0ECD5 /* ExpensePresenter.swift in Sources */,
+				711658BD217F84BA006C3B79 /* PayerViewController.swift in Sources */,
 				71A8BC3C216C30D200A0ECD5 /* ExpenseModel.swift in Sources */,
 				716B6F8820C9EE1E007A5CB0 /* GroupExpensesPresenter.swift in Sources */,
 			);

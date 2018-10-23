@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZH0-F1-xIy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payer View Controller-->
+        <scene sceneID="rjR-cl-j7x">
+            <objects>
+                <viewController id="ZH0-F1-xIy" customClass="PayerViewController" customModule="splitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xgq-Kh-C7J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-4M-ANb">
+                                <rect key="frame" x="16" y="496" width="343" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="fde-lf-a6D"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="e8U-hc-AAG" kind="embed" id="riW-OE-pmE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20485805457746478" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fpc-4M-ANb" firstAttribute="leading" secondItem="LNn-eV-pvb" secondAttribute="leading" constant="16" id="7k7-py-eJf"/>
+                            <constraint firstItem="LNn-eV-pvb" firstAttribute="trailing" secondItem="Fpc-4M-ANb" secondAttribute="trailing" constant="16" id="865-R7-EDH"/>
+                            <constraint firstItem="LNn-eV-pvb" firstAttribute="bottom" secondItem="Fpc-4M-ANb" secondAttribute="bottom" constant="20" id="Rbe-LF-kEh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LNn-eV-pvb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Flh-3D-eQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="P5i-oy-n45">
+            <objects>
+                <viewController id="e8U-hc-AAG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Z6-Lq-Ayn">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-sh-4n9">
+                                <rect key="frame" x="39" y="64" width="265" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Name"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Y-bw-76q">
+                                <rect key="frame" x="39" y="102" width="265" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="HAo-lV-UW0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUp-bM-TPT">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                <items>
+                                    <navigationItem title="Who paid and how much?" id="E8y-b0-Cot">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="KQq-iy-BgC"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="UZX-uW-wss"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z6Y-bw-76q" firstAttribute="leading" secondItem="qWV-sh-4n9" secondAttribute="leading" id="0dt-oO-7FI"/>
+                            <constraint firstAttribute="trailing" secondItem="uUp-bM-TPT" secondAttribute="trailing" id="FZi-Bd-6me"/>
+                            <constraint firstItem="Z6Y-bw-76q" firstAttribute="top" secondItem="qWV-sh-4n9" secondAttribute="bottom" constant="8" id="b4E-4f-9Ov"/>
+                            <constraint firstItem="Z6Y-bw-76q" firstAttribute="trailing" secondItem="qWV-sh-4n9" secondAttribute="trailing" id="gpu-iY-tFs"/>
+                            <constraint firstItem="uUp-bM-TPT" firstAttribute="top" secondItem="5Z6-Lq-Ayn" secondAttribute="top" id="jAQ-xm-L9N"/>
+                            <constraint firstItem="qWV-sh-4n9" firstAttribute="top" secondItem="uUp-bM-TPT" secondAttribute="bottom" constant="20" id="lXb-DP-9MW"/>
+                            <constraint firstItem="uUp-bM-TPT" firstAttribute="leading" secondItem="5Z6-Lq-Ayn" secondAttribute="leading" id="v98-kV-uQ1"/>
+                            <constraint firstItem="qWV-sh-4n9" firstAttribute="leading" secondItem="5Z6-Lq-Ayn" secondAttribute="leadingMargin" constant="23" id="wnb-v7-ekw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qWV-sh-4n9" secondAttribute="trailing" constant="23" id="yab-pA-0Iq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hd-48-4OX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.80000000000001" y="792.50374812593714"/>
+        </scene>
+    </scenes>
+</document>
